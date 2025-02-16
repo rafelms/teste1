@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0909;
+    color: white;
+}
+.logo{
+    width: 80px; 
+    display: block;
+    margin: auto;
+
+}
+
+h1{
+    color:#f1e8e8;
+    margin: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+section1, section2 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin: 50px;
+    background-color: #070606;
+    width: 700px;
+    height: 1005px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: rgba(51, 204, 51, 0.5) 0px 6px 12px -2px;
+}  
+
+.card>h2{
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.card>p{
+    font: 15px;
+    padding: 20px 20px;
+}
+
+.card>img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.botao{
+    font-size: 17px;
+    padding: 10px 50px;
+    background-color: rgba(51, 204, 51, 0.5);
+    color: #f3efef;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.5s background;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botao > a{
+    text-decoration: none;
+    color: #f3efef
+}
+.botao:hover{
+    background: #333333;
+}
+
+nav.menu-lateral{
+    width: 75px;
+    height: 100%;
+    background-color: rgba(51, 204, 51, 0.5);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+nav.menu-lateral:hover{
+    width: 245px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu{
+    transition: 0.5s;
+}
+ul li.item-menu:hover{
+    background-color: #202020;
+}
+
+ul li.item-menu a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul li.item-menu a .texto{
+    margin-left: 30px;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+}
+
+.drop {
+    display: none; /* Inicia oculto */
+    position: relative; /* Mantém o submenu alinhado */
+    background-color: #202020; 
+    width: 100%; 
+    padding: 10px; /* Espaço interno para visibilidade */
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 5px; /* Espaçamento entre itens */
+}
+
+.drop a {
+    color: #fff !important;
+    text-decoration: none; 
+    display: block; /* Ocupa toda a largura */
+    padding: 8px 12px; /* Ajusta o tamanho do link */
+    font-size: 16px; 
+}
+
+.drop a:hover {
+    background-color: #333; /* Efeito hover */
+}
+
+/* Mantém visível ao passar o mouse */
+.drop-hover:hover .drop {
+    display: flex;
+}
+
+/* Mantém visível ao clicar */
+.drop.active {
+    display: flex !important;
+}

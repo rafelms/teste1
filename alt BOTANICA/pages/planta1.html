@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girassol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/styles/plantas.css">
+</head>
+<body>
+<header>
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list"></i>
+        </div>
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="texto">Maria Eduarda</span>
+                </a>
+                <li class="item-menu">
+                    <a href="main.html">
+                        <span class="icon"><i class="bi bi-bookmark-star-fill"></i></span>
+                        <span class="texto">Principal</span>
+                    </a>
+                </li>
+            </li>
+            <li class="item-menu drop-hover">
+                <a href="#" class="menu-toggle">
+                    <span class="icon"><i class="bi bi-flower2"></i></span>
+                    <span class="texto">Plantas Cadastradas</span>
+                </a>
+                <ul class="drop">
+                    <li><a href="/pages/planta1.html" class="submenu">Planta 1</a></li>
+                    <li><a href="planta2.html" class="submenu">Planta 2</a></li>
+                    <li><a href="/pages/planta3.html" class="submenu">Planta 3</a></li>
+                    <li><a href="planta4.html" class="submenu">Planta 4</a></li>
+                    <li><a href="planta5.html" class="submenu">Planta 5</a></li>
+                    <li><a href="planta6.html" class="submenu">Planta 6</a></li>
+                </ul>
+            </li>                
+            <li class="item-menu">
+                <a href="/index.html">
+                    <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                    <span class="texto">Início</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+                    <span class="texto">Contatos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<img src="/icons/outralogo.png" alt="Logo" class="logo">
+    <h1>GIRASSOL</h1>
+    <section1> 
+        <div class="card card1">
+            <img src="/assets/girassol.jpg" alt="Girassol">
+            <h2>Helianthus annuus L.</h2>
+            <p>
+                Descrição da planta: O GIRASSOL (Helianthus annuus L.) é uma planta da família Asteraceae, com caule robusto, folhas grandes e flores amarelas que seguem o sol (heliotropismo). 
+                Pode atingir de 1 a 3 metros de altura e suas sementes são usadas para óleo e consumo. Adaptado a climas temperados e tropicais, cresce em solos bem drenados. 
+                Originário da América do Norte e Central, hoje é cultivado globalmente, especialmente nos EUA, Rússia, China, Argentina e Brasil. Classificação taxonômica:pertence ao reino Plantae, 
+                família Asteraceae, gênero Helianthus e espécie annuus. É uma angiosperma dicotiledônea da ordem Asterales. Espécies relacionadas:
+
+                - Girassol silvestre (Helianthus petiolaris)
+                - Girassol perene (Helianthus tuberosus)
+                - Girassol de flores vermelhas (Helianthus debilis)
+                - Helianthus argophyllus
+                - Helianthus californicus
+                Status de conservação não está listado como uma espécie ameaçada de extinção. Ele é amplamente cultivado em várias partes do mundo, tanto para fins ornamentais quanto para a produção de óleo e sementes.
+                Seu status de conservação não é uma preocupação, pois é uma planta domesticada com grande importância agrícola e econômica.
+            </p>
+            <button class="botao">
+                <a href="https://brasilescola.uol.com.br/biologia/girassol.htm" target="_blank">VER MAIS</a>
+            </button>
+        </div>
+    <section1>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggles = document.querySelectorAll(".menu-toggle");
+        
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", function(event) {
+                    event.preventDefault(); // Evita redirecionamento do link
+                    
+                    const dropMenu = this.nextElementSibling; // Seleciona o submenu correspondente
+                    
+                    // Fecha todos os outros submenus antes de abrir o clicado
+                    document.querySelectorAll(".drop").forEach(menu => {
+                        if (menu !== dropMenu) {
+                            menu.classList.remove("active");
+                        }
+                    });
+        
+                    dropMenu.classList.toggle("active");
+                });
+            });
+        
+            // Fecha o submenu ao clicar fora
+            document.addEventListener("click", function(event) {
+                if (!event.target.closest(".drop-hover")) {
+                    document.querySelectorAll(".drop").forEach(menu => {
+                        menu.classList.remove("active");
+                    });
+                }
+            });
+        });
+        </script>   
+</body>
+</html>
